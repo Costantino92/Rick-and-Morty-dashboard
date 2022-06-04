@@ -1,0 +1,14 @@
+<div class="container">
+  <div *ngIf="favoriteCharactersList.length > 0; else noCharacter">
+    <h1>Personaggi preferiti</h1>
+    <ol>
+      <li class="character-li" *ngFor="let character of favoriteCharactersList">
+        {{ character.name }}
+      </li>
+    </ol>
+  </div>
+</div>
+
+<ng-template #noCharacter>
+  <h3>Nessun personaggio preferito</h3>
+</ng-template>

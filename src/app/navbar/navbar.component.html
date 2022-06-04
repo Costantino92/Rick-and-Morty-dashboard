@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>I personaggi di “Rick and Morty”</h1>
+  <input
+    type="text"
+    placeholder="Cerca un personaggio"
+    (input)="searchCharacter($event)"
+  />
+  <div class="routing-buttons">
+    <button type="button" routerLink="/home" routerLinkActive="active">
+      Home
+    </button>
+    <button type="button" routerLink="/favorite" routerLinkActive="active">
+      Personaggi preferiti
+    </button>
+  </div>
+</div>

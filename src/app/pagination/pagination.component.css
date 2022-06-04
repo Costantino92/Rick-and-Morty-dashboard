@@ -1,0 +1,33 @@
+.pagination-container {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination {
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  margin: 0 1px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
+.pagination-bg-color {
+  background-color: rgb(62, 62, 255);
+}
+
+.prev {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.next {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

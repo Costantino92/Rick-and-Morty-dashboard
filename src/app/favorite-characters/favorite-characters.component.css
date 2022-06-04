@@ -3,3 +3,7 @@
   flex-direction: column;
   align-items: center;
 }
+
+.character-li {
+  margin: 10px 0;
+}

@@ -1,0 +1,18 @@
+<div class="pagination-container">
+  <div class="prev" (click)="prev(this.responseApi.info.prev)">
+    <span><< Prev</span>
+  </div>
+  <div
+    [ngClass]="{
+      'pagination-bg-color ': pages[i + 1] == this.responseApi.info.next
+    }"
+    class="pagination"
+    (click)="pagination(page)"
+    *ngFor="let page of pages; index as i"
+  >
+    {{ i + 1 }}
+  </div>
+  <div class="next" (click)="next(this.responseApi.info.next)">
+    <span>Next >></span>
+  </div>
+</div>

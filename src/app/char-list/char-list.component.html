@@ -1,0 +1,42 @@
+<div container>
+  <div class="list-container">
+    <ol *ngIf="responseApi" style="min-height: 650px">
+      <li
+        *ngFor="let el of responseApi.results; index as i"
+        class="character-li"
+      >
+        <div (click)="modal(el.name)">{{ i + 1 }}. {{ el.name }}</div>
+        <div>
+          <button
+            class="addFavorite"
+            (click)="addFavorite(el, $event)"
+            type="button"
+            [disabled]="el.disabled"
+          >
+            {{ el.disabled ? "Aggiunto" : "Aggiungi ai preferiti" }}
+          </button>
+        </div>
+      </li>
+    </ol>
+    <div></div>
+  </div>
+
+  <div class="modal-background" *ngIf="toggle"></div>
+  <div class="modal-body" *ngIf="toggle">
+    <span class="close-modal" (click)="closeModal()">Close X</span>
+    <p>id:{{ character.id }}</p>
+    <p>name:{{ character.name }}</p>
+    <p>status:{{ character.status }}</p>
+    <p>species:{{ character.species }}</p>
+    <p>type:{{ character.type }}</p>
+    <p>gender:{{ character.gender }}</p>
+    <p>origin:{{ character.origin.name }}</p>
+    <p>location:{{ character.location.name }}</p>
+    <p>image: <img src="{{ character.image }}" alt="char-avatar" /></p>
+    <div>
+      episode:
+      <pre>{{ episodeName }}</pre>
+    </div>
+    <p>created:{{ character.created }}</p>
+  </div>
+</div>
