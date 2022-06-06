@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { ApiServService } from './api-serv.service';
 import { apiResponse, character } from '../Interfaces';
 import { Subject } from 'rxjs';
-import { observeNotification } from 'rxjs/internal/Notification';
 
 @Injectable({
   providedIn: 'root',
